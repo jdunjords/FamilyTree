@@ -5,9 +5,8 @@ Like ancestry.com, but worse. Mostly just for fun and to play around with some n
 First we'll need to setup our project's virtual environment. Follow the instructions on this page: https://docs.python.org/3/library/venv.html
 to do so.
 
-Once created, activate the environment, and run the following command:
-```pip install -r requirements.txt```
-This will install all project dependencies into our virtual environment. This file is subject to change as development progresses.
+I'm having some weird issues with pip freeze, so for now, just try running the project and run a `pip install` for each package python says
+is missing. Hopefully not too many, agh...
 
 With our environment activated and our dependencies under control, we can start the flask development server with the following command:
 ```python run.py```
