@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class='content-section'>
+	<!-- action="" means post form to same route we're currently on -->
+	<form action="" method="POST">
+		{{ form.hidden_tag() }}
+		<fieldset class="form-group">
+			<legend class="border-bottom mb-4">Are you sure you want to delete your account?</legend>
+			<div class="form-check">
+				{{ form.archive_posts(class="form-check-input") }}
+				{{ form.archive_posts.label(class="form-check-label") }}
+			</div>
+		</fieldset>
+		<div class="form-group">
+			{{ form.submit(class="btn btn-danger") }}
+		</div>
+	</form>
+</div>
+
+{% endblock content %}

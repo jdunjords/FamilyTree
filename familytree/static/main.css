@@ -1,0 +1,79 @@
+body {
+    margin-top: 5rem;
+}
+/* .content-section{
+    box-shadow: 10px 10px black;
+} */
+.bg-steel {
+    background-color: #854997;
+}
+
+.list-group-item {
+    background-color: #dad7cd;
+    border-style: solid;
+}
+
+.site-header .navbar-nav .nav-link.active {
+    font-weight: 500;
+}
+.account-img {
+    height: 125px;
+    width: 125px;
+    margin-right: 20px;
+    margin-bottom: 16px;
+  }
+
+/* .content-section {
+    background: #404040;
+    padding: 10px 20px;
+    border: 1px solid #404040;
+    border-radius: 3px;
+    margin-bottom: 20px;
+} */
+
+.btn-outline-info {
+    background-color: #ffffff;
+    border-color: #854997;
+    color: #854997;
+}
+.btn-info {
+    background-color: #854997;
+    border-color: #854997;
+    color: #ffffff;
+}
+.btn-info:hover {
+    color: #854997;
+    background-color: #ffffff;
+    border-color: #854997;
+}
+.btn-outline-info:hover{
+    background-color: #854997;
+    border-color:#854997;
+    color: #ffffff;
+}
+/* .home-dropdown-btn {
+    background-color: black;
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+    height: 30px;
+    color: white;
+    margin: 5px;
+    text-align: center;
+}
+.dropdown-btn{
+    background-color: black;
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+    top: 10%;
+    height: 30px;
+    color: white;
+    margin: 5px;
+    text-align: center;
+}
+.button-style{
+    height: 40px;
+    width: 200px;
+    position: absolute;
+} */

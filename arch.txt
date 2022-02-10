@@ -1,0 +1,40 @@
+
+TODO
+----------
+* create layout.html that each template will extend
+* create sqlite models
+* csrf is false in wtforms rn... we probably want that security though?
+* should validate redirected page to prevent open redirect vulnerability in users.login
+* old profile pic not deleted when updated with new one currently
+
+
+Basic design
+----------
+* data classes:
+    - person
+        * name
+        * DOB (nullable)
+        * parents                --> instance of relationship class?
+        * children (nullable)    --> instance of relationship class?
+    - relationship
+        * two FKs: one is for a user, and the other is to their relative
+        * a simple boolean 'is_child' tells us whether 'user' is a child of 'relative' (if false, then relative is a child of user)
+
+* relationships
+    - can we easily compute cousins, grandparents, etc.?
+        * yes, each would be a slightly different traversal problem. cool.
+        * to find all cousins, we would traverese up to a person's grandparents, then traverse to their other grandchildren
+        * this would be a relatively small traversal, even with large families -- so let's not worry about saving a person's cousins
+    - NOTE: for now, all that is stored are users and relationships. Since a family tree can be constructed by recursively traversing parents and children,
+            the parent/child relationship is all that we will store. We could extend this to be able to add cousins etc., but for now we will only be able to add
+            parents and children
+
+* tree view
+    - this is the hard bit... what's the most natural?
+    - ancestry.com does something similar to what i described above -- only displaying parents (excluding siblings)
+    - it would be cool to do this, but also have more viewing options... but what would that be?
+        * option to expand siblings
+        * change 'focus' of the graph
+            - i.e. change the root user
+
+

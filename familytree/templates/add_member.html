@@ -1,0 +1,75 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="content-section">
+		<!-- action="" means post form to same route we're currently on -->
+		<form action="" method="POST">
+			{{ form.hidden_tag() }}
+			<fieldset class="form-group">
+				<legend class="border-bottom mb-4"> Add a Family Member to Your Tree</legend>
+				<!-- FIRST NAME -->
+				<div class="form-group">
+					{{ form.firstname.label(class="form-control-label") }}
+
+					{% if form.firstname.errors %}
+					{{ form.firstname(class="form-control form-control-lg is-invalid") }}
+						<div class="invalid-feedback">
+							{% for error in form.firstname.errors %}
+								<span>{{ error }}</span>
+							{% endfor %}
+						</div>
+					{% else %}
+						{{ form.firstname(class="form-control form-control-lg") }}
+					{% endif %}
+				</div>
+				<!-- MIDDLE NAME -->
+				<div class="form-group">
+					{{ form.middlename.label(class="form-control-label") }}
+
+					{% if form.middlename.errors %}
+					{{ form.middlename(class="form-control form-control-lg is-invalid") }}
+						<div class="invalid-feedback">
+							{% for error in form.middlename.errors %}
+								<span>{{ error }}</span>
+							{% endfor %}
+						</div>
+					{% else %}
+						{{ form.middlename(class="form-control form-control-lg") }}
+					{% endif %}
+				</div>
+				<!-- LAST NAME -->
+				<div class="form-group">
+					{{ form.lastname.label(class="form-control-label") }}
+
+					{% if form.lastname.errors %}
+					{{ form.lastname(class="form-control form-control-lg is-invalid") }}
+						<div class="invalid-feedback">
+							{% for error in form.lastname.errors %}
+								<span>{{ error }}</span>
+							{% endfor %}
+						</div>
+					{% else %}
+						{{ form.lastname(class="form-control form-control-lg") }}
+					{% endif %}
+				</div>
+				<!-- DOB -->
+				<div class="form-group">
+					{{ form.dob.label(class="form-control-label") }}
+
+					{% if form.dob.errors %}
+					{{ form.dob(class="form-control form-control-lg is-invalid") }}
+						<div class="invalid-feedback">
+							{% for error in form.dob.errors %}
+								<span>{{ error }}</span>
+							{% endfor %}
+						</div>
+					{% else %}
+						{{ form.dob(class="form-control form-control-lg") }}
+					{% endif %}
+				</div>
+			</fieldset>
+			<div class="form-group">
+				{{ form.submit(class="btn btn-outline-info") }}
+			</div>
+		</form>
+	</div>
+{% endblock content %}
